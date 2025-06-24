@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Danfo&family=Bricolage+Grotesque:wght@700&display=swap');
+
+body, #app {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #E8E0A7;
+    color: #1A1B1C;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(180deg, #F06115 25%, #FFFBF7 100%);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+.App-header h1 {
+    font-family: "Danfo", cursive;
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #F06115, 4px 4px 0 #DF8ED1;
+}
+
+.goal-section {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.goal-title {
+    font-size: 2.2rem;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: #5D76C9;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0 #FFFBF7;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2.5rem;
+}
+
+.goal-card, .newTaskForm, .tasks-list {
+    max-width: 1800px;
+    min-width: 1000px;
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 1250px) {
+  .group, .goal-card, .newTaskForm, .tasks-list {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+
+.task-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #DF8ED1;
+    border: 4px solid #5D76C9;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(33, 154, 154, 0.08);
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1A1B1C;
+    transition: box-shadow 0.2s;
+}
+
+.task-title {
+    color: #1A1B1C;
+    font-size: 1.15em;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: color 0.15s;
+    font-family: "Montserrat", sans-serif;
+}
+.task-title.completed {
+    text-decoration: line-through;
+    color: #94911C;
+}
+
+.delete-btn {
+    background: #F06115;
+    border: none;
+    color: #FFFBF7;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.2em 0.7em;
+    border-radius: 50%;
+    transition: background 0.15s;
+}
+.delete-btn:hover {
+    background: #5D76C9;
+    color: #FFFBF7;
+}
+
+.newTaskForm {
+    max-width: 1000px;
+    width: 100%;
+    min-width: unset;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #a29c19;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(33, 154, 154, 0.08);
+}
+
+.newTaskForm label {
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.newTaskForm input,
+.newTaskForm select {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 8px;
+    border: 2px solid #DF8ED1;
+    font-size: 1.5rem;
+}
+
+.newTaskForm button {
+    background: #F06115;
+    color: #FFFBF7;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+.newTaskForm button:hover {
+    background: #5D76C9;
+}
+
+.logo {
+    display: flex;
+    padding: 3em 0 0 0;
+    justify-content: center;
+}
+.logo img{
+    max-width: 300px;
+}
+.survived-nav {
+    background: none;
+    box-shadow: none;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+html {
+    margin: 0;
+}
+.hero {
+    padding: 4rem 1rem;
+    text-align: center;
+    font-family: "Danfo";
+    min-height: 320px;
+    max-height: 500px;
+    background-color: #FFFBF7;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin: 0;
+    font-family: "Danfo";
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.marqueeContainer {
+    background-color: #DF8ED1;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.marquee {
+    font-family: "Bricolage Grotesque", "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFBF7;
+    padding: 1rem 0;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0%);}
+    100% { transform: translateX(-100%); }
+}
+
+article {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    margin: 1rem;
+    background: #5D76C9;
+    border-radius: 1rem;
+    text-align: left;
+    overflow: hidden;
+    border: 8px solid #5D76C9;
+}
+
+article img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.text-container {
+    padding: 16px 24px;
+    color: #FFFBF7;
+    font-family: "Bricolage Grotesque";
+}
+
+.text-container h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #DF8ED1;
+    text-shadow:
+        -1px -1px 0 #1A1B1C,
+        1px -1px 0 #1A1B1C,
+        -1px  1px 0 #1A1B1C,
+        1px  1px 0 #1A1B1C;
+    margin: 0;
+}
+
+.text-container h4 {
+    font-size: 32px;
+    font-weight: 800;
+    color:  #DF8ED1;
+    text-shadow:
+        -1px -1px 0 #1A1B1C,
+        1px -1px 0 #1A1B1C,
+        -1px  1px 0 #1A1B1C,
+        1px  1px 0 #1A1B1C;
+    margin: 0 0 16px 0;
+}
+
+.text-container p {
+    font-size: 24px;
+    font-weight: 600;
+    color:  #FFFBF7;
+    margin: 0;
+}
+
+.marquee-bar {
+    width: 100vw;
+    background: #e89ad3;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
